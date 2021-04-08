@@ -24,6 +24,14 @@
       }
     </style>
     <script>
+      function resetTable() {
+        var table = document.getElementById("bacteriaTable");
+        var firstRowIndex = 2;
+        var i;
+        for (i = 2; i < 3; i++) {
+          table.deleteRow(i);
+        }
+      }
       function calculateBacteriaGrowth() {
         var initialBacteria = document.getElementById("initialBacteriaUser").value;
         var days = [];
@@ -36,6 +44,7 @@
           console.log("Day: " + days[i] + ", Bacteria " + bacteria[i]);
         }
         document.getElementById("initialBacteriaPresent").innerHTML = initialBacteria;
+        resetTable();
         var table = document.getElementById("bacteriaTable");
         var row = table.insertRow(firstRowIndex);
         var dayCell = row.insertCell(0);
