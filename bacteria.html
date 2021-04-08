@@ -24,13 +24,17 @@
       }
     </style>
     <script>
-      function calculateBacteriaGrowth(initialBacteria) {
-        alert("The input value has changed. The new value is: " + initialBacteria);
+      function calculateBacteriaGrowth() {
+        var initialBacteria = document.getElementById("initialBacteria").value;
+        alert("Initial bacteria present is: " + initialBacteria);
       }
     </script>
   </head>
   <body>
-    <input type="text" name="initialBacteriaText" value="1" onchange="calculateBacteriaGrowth(this.value)">
+    <form action="#" method="post" onsubmit="return calculateBacteriaGrowth()">
+      Enter Initial Bacteria Present: <input type="text" name="initialBacteria" value="1">
+      <input type="submit" value="Calculate">
+    </form>
     <table id="bacteria">
       <tr>
         <th>Initial Bacteria Present:</th>
