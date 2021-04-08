@@ -24,14 +24,15 @@
       }
     </style>
     <script>
-      function resetTable() {
+      function clearTable() {
         var table = document.getElementById("bacteriaTable");
-        var numberRows = table.rows.length;
-        console.log("numberRows = " + numberRows);
-        var firstRowIndex = 2;
-        for (var i = firstRowIndex; i < numberRows; i++) {
-          table.deleteRow(i);
-        }
+        table.getElementsByTagName("tbody")[0].innerHTML = table.rows[0].innerHTML;     
+//         var numberRows = table.rows.length;
+//         console.log("numberRows = " + numberRows);
+//         var firstRowIndex = 2;
+//         for (var i = firstRowIndex; i < numberRows; i++) {
+//           table.deleteRow(i);
+//         }
       }
       function createTable(initialBacteria, days, bacteria) {
         var table = document.getElementById("bacteriaTable");
@@ -53,7 +54,7 @@
           days[i] = i + 1;
           bacteria[i] = Math.floor(initialBacteria * Math.pow(2, days[i] / 10));
         }
-        resetTable();
+        clearTable();
         //createTable(initialBacteria, days, bacteria);
       }
     </script>
