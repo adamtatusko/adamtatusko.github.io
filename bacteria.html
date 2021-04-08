@@ -27,6 +27,7 @@
       function resetTable() {
         var table = document.getElementById("bacteriaTable");
         var numberRows = table.rows.length;
+        console.log("numberRows = " + numberRows);
         var firstRowIndex = 2;
         for (var i = firstRowIndex; i < numberRows; i++) {
           table.deleteRow(i);
