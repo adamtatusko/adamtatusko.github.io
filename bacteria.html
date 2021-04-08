@@ -37,8 +37,7 @@
         var days = [];
         var bacteria = [];
         var firstRowIndex = 2;
-        var i;
-        for (i = 0; i < 10; i++) {
+        for (var i = 0; i < 10; i++) {
           days[i] = i + 1;
           bacteria[i] = Math.floor(initialBacteria * Math.pow(2, days[i] / 10));
           console.log("Day: " + days[i] + ", Bacteria " + bacteria[i]);
