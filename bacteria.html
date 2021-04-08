@@ -26,20 +26,22 @@
     <script>
       function calculateBacteriaGrowth() {
         var initialBacteria = document.getElementById("initialBacteriaUser").value;
-        var day = 1;
+        var days = [];
+        var bacteria = [];
         var firstRowIndex = 2;
-        for (day = 1; day <= 10; day++) {
-          console.log(day);
+        var i;
+        for (i = 0; i < 10; i++) {
+          days[i] = i + 1;
+          bacteria[i] = i * 100;
+          console.log("Day: " + days[i] + ", Bacteria " + bacteria[i]);
         }
         document.getElementById("initialBacteriaPresent").innerHTML = initialBacteria;
-        // Find a <table> element with id="myTable":
         var table = document.getElementById("bacteriaTable");
-
         var row = table.insertRow(firstRowIndex);
         var dayCell = row.insertCell(0);
         var bacteriaCell = row.insertCell(1);
-        dayCell.innerHTML = "X";
-        bacteriaCell.innerHTML = "Y";
+        dayCell.innerHTML = days[0];
+        bacteriaCell.innerHTML = bacteria[0];
       }
     </script>
   </head>
