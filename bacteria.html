@@ -27,13 +27,6 @@
       function clearTable() {
         var table = document.getElementById("bacteriaTable");
         table.getElementsByTagName("tbody")[0].innerHTML = table.rows[0].innerHTML;
-        table.getElementsByTagName("tbody")[1].innerHTML = table.rows[1].innerHTML;  
-//         var numberRows = table.rows.length;
-//         console.log("numberRows = " + numberRows);
-//         var firstRowIndex = 2;
-//         for (var i = firstRowIndex; i < numberRows; i++) {
-//           table.deleteRow(i);
-//         }
       }
       function createTable(initialBacteria, days, bacteria) {
         var table = document.getElementById("bacteriaTable");
@@ -56,7 +49,7 @@
           bacteria[i] = Math.floor(initialBacteria * Math.pow(2, days[i] / 10));
         }
         clearTable();
-        //createTable(initialBacteria, days, bacteria);
+        createTable(initialBacteria, days, bacteria);
       }
     </script>
   </head>
@@ -64,10 +57,9 @@
     Enter Initial Bacteria Present: <input type="number" id="initialBacteriaUser" value="1000">
     <input type="button" id="calculateButton" value="Calculate" onclick="calculateBacteriaGrowth()">
     <br><br>
+    Initial Bacteria Present: <span id="initialBacteriaPresent">1000</span>
+    <br><br>
     <table id="bacteriaTable">
-      <tr>
-        <th>Initial Bacteria Present: <span id="initialBacteriaPresent">1000</span></th>
-      </tr>
       <tr>
         <th>Day</th>
         <th>Bacteria</th>
