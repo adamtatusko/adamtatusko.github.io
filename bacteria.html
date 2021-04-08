@@ -32,7 +32,7 @@
         var i;
         for (i = 0; i < 10; i++) {
           days[i] = i + 1;
-          bacteria[i] = initialBacteria * Math.pow(2, days[i] / 10);
+          bacteria[i] = Math.floor(initialBacteria * Math.pow(2, days[i] / 10));
           console.log("Day: " + days[i] + ", Bacteria " + bacteria[i]);
         }
         document.getElementById("initialBacteriaPresent").innerHTML = initialBacteria;
