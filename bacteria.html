@@ -25,18 +25,18 @@
     </style>
     <script>
       function calculateBacteriaGrowth() {
-        var initialBacteria = document.getElementById("initialBacteria").value;
+        var initialBacteria = document.getElementById("initialBacteriaUser").value;
         alert("Initial bacteria present is: " + initialBacteria);
       }
     </script>
   </head>
   <body>
-    Enter Initial Bacteria Present: <input type="number" id="initialBacteria" value="1">
+    Enter Initial Bacteria Present: <input type="number" id="initialBacteriaUser" value="1">
     <input type="button" id="calculateButton" value="Calculate" onclick="calculateBacteriaGrowth()">
     <br><br>
     <table id="bacteria">
       <tr>
-        <th>Initial Bacteria Present:</th>
+        <th>Initial Bacteria Present: <span id="initialBacteriaPresent">1</span></th>
       </tr>
       <tr>
         <th>Day</th>
