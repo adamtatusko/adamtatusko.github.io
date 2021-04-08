@@ -3,31 +3,45 @@
   <head>
     <title>Bacteria Growth Over Time</title>
     <style>
+      table {
+        width: 70%;
+      }
       table, th, td {
-        border: 1px solid black;
+        border: 1px solid #56746C;
+        border-collapse: collapse;
+      }
+      th, td {
+        padding: 15px;
+        text-align: left;
+      }
+      #bacteria th {
+        background-color: #E3ECEB;
+        color: #56746C;
+      }
+      #bacteria td {
+        background-color: #FFFFFF;
+        color: #E3ECEB;
       }
     </style>
     <script>
     </script>
   </head>
   <body>
-    light_green = #E3ECEB<br>
-    dark_green = #56746C
-    <table style="width:100%">
+    <table id="bacteria">
       <tr>
-        <td>Initial Bacteria present:</td>
+        <th>Initial Bacteria present:</th>
       </tr>
       <tr>
-        <td>Day</td>
-        <td>Bacteria</td>
+        <th>1</th>
+        <th>...</th>
       </tr>
       <tr>
-        <td>Jill</td>
-        <td>Smith</td>
+        <td>...</td>
+        <td>...</td>
       </tr>
       <tr>
-        <td>Eve</td>
-        <td>Jackson</td>
+        <td>10</td>
+        <td>...</td>
       </tr>
     </table>
   </body>
