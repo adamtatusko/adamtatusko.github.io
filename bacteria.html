@@ -23,10 +23,16 @@
         color: #56746C;
       }
     </style>
+    <script>
+      function calculateBacteriaGrowth() {
+        var initialBacteria = document.getElementById("initialBacteria").value;
+        alert("Initial bacteria present is: " + initialBacteria);
+      }
+    </script>
   </head>
   <body>
-    Enter Initial Bacteria Present: <input type="number" name="initialBacteria" value="1">
-    <input type="button" value="Calculate" onclick="calculateBacteriaGrowth()">
+    Enter Initial Bacteria Present: <input type="number" id="initialBacteria" value="1">
+    <input type="button" id="calculateButton" value="Calculate" onclick="calculateBacteriaGrowth()">
     <br><br>
     <table id="bacteria">
       <tr>
@@ -49,11 +55,5 @@
         <td>...</td>
       </tr>
     </table>
-    <script>
-      function calculateBacteriaGrowth() {
-        var initialBacteria = document.getElementById("initialBacteria").value;
-        alert("Initial bacteria present is: " + initialBacteria);
-      }
-    </script>
   </body>
 <html>
