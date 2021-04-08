@@ -32,7 +32,7 @@
           table.deleteRow(i);
         }
       }
-      function createTable(days, bacteria) {
+      function createTable(initialBacteria, days, bacteria) {
         var table = document.getElementById("bacteriaTable");
         document.getElementById("initialBacteriaPresent").innerHTML = initialBacteria;
         firstRowIndex = 2;
@@ -54,7 +54,7 @@
           console.log("Day: " + days[i] + ", Bacteria " + bacteria[i]);
         }
         resetTable();
-        createTable(days, bacteria);
+        createTable(initialBacteria, days, bacteria);
       }
     </script>
   </head>
