@@ -24,9 +24,13 @@
       }
     </style>
     <script>
+      function calculateBacteriaGrowth(initialBacteria) {
+        alert("The input value has changed. The new value is: " + initialBacteria);
+      }
     </script>
   </head>
   <body>
+    <input type="text" name="initialBacteriaText" value="1" onchange="calculateBacteriaGrowth(this.value)">
     <table id="bacteria">
       <tr>
         <th>Initial Bacteria Present:</th>
