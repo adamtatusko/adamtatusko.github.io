@@ -32,24 +32,29 @@
           table.deleteRow(i);
         }
       }
+      function createTable(days, bacteria) {
+        var table = document.getElementById("bacteriaTable");
+        document.getElementById("initialBacteriaPresent").innerHTML = initialBacteria;
+        firstRowIndex = 2;
+        for (var i = 0; i < days.length; i++) {
+          var row = table.insertRow(firstRowIndex + i);
+          var dayCell = row.insertCell(0);
+          var bacteriaCell = row.insertCell(1);
+          dayCell.innerHTML = days[i];
+          bacteriaCell.innerHTML = bacteria[i];
+        }
+      }
       function calculateBacteriaGrowth() {
         var initialBacteria = document.getElementById("initialBacteriaUser").value;
         var days = [];
         var bacteria = [];
-        var firstRowIndex = 2;
         for (var i = 0; i < 10; i++) {
           days[i] = i + 1;
           bacteria[i] = Math.floor(initialBacteria * Math.pow(2, days[i] / 10));
           console.log("Day: " + days[i] + ", Bacteria " + bacteria[i]);
         }
-        document.getElementById("initialBacteriaPresent").innerHTML = initialBacteria;
         resetTable();
-        var table = document.getElementById("bacteriaTable");
-        var row = table.insertRow(firstRowIndex);
-        var dayCell = row.insertCell(0);
-        var bacteriaCell = row.insertCell(1);
-        dayCell.innerHTML = days[0];
-        bacteriaCell.innerHTML = bacteria[0];
+        createTable(days, bacteria);
       }
     </script>
   </head>
