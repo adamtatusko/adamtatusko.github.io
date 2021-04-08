@@ -31,9 +31,8 @@
       function createTable(initialBacteria, days, bacteria) {
         var table = document.getElementById("bacteriaTable");
         document.getElementById("initialBacteriaPresent").innerHTML = initialBacteria;
-        firstRowIndex = 2;
         for (var i = 0; i < days.length; i++) {
-          var row = table.insertRow(firstRowIndex + i);
+          var row = table.insertRow(i + 1);
           var dayCell = row.insertCell(0);
           var bacteriaCell = row.insertCell(1);
           dayCell.innerHTML = days[i];
